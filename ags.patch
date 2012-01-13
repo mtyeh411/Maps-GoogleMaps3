@@ -1,0 +1,57 @@
+Only in Maps/includes/services/GoogleMaps3: ags
+Only in Maps/includes/services/GoogleMaps3: ags.patch
+Only in Maps/includes/services/GoogleMaps3: .git
+diff -r Maps_1_1a/includes/services/GoogleMaps3/GoogleMaps3.php Maps/includes/services/GoogleMaps3/GoogleMaps3.php
+37a38,46
+> $wgResourceModules['ext.maps.gm3.ags'] = array(
+> 	'localBasePath' => dirname( __FILE__ ) . '/ags',
+> 	'remoteBasePath' => $egMapsScriptPath . '/includes/services/GoogleMaps3/ags',
+> 	'group' => 'ext.maps',
+> 	'scripts' => array(
+> 		'arcgislink_compiled.js',
+> 	),
+> );
+> 
+diff -r Maps_1_1a/includes/services/GoogleMaps3/jquery.googlemap.js Maps/includes/services/GoogleMaps3/jquery.googlemap.js
+195a196,212
+> 		// Add the ArcGIS layers
+> 		if ( options.layer_url.length != 0 ) {
+> 			mw.loader.using( ['ext.maps.gm3.ags'], function() {
+> 				if ( options.layer_click != false ) {
+> 					this.map.enableArcGISClick();
+> 				}
+> 				var agsLayers = options.layer_url.split( ',', 5 );
+> 				$.each( agsLayers, function( index, layer_url ) {
+> 					var agsLayer = new gmaps.ags.MapOverlay (
+> 						layer_url,
+> 						{ opacity: options.layer_opacity }
+> 					);
+> 					agsLayer.setMap( map );
+> 				});
+> 			});
+> 		}
+> 		
+309c326
+< }; })( jQuery, window.mediaWiki );
+\ No newline at end of file
+---
+> }; })( jQuery, window.mediaWiki );
+diff -r Maps_1_1a/includes/services/GoogleMaps3/Maps_GoogleMaps3.php Maps/includes/services/GoogleMaps3/Maps_GoogleMaps3.php
+88c88,101
+< 		
+---
+> 
+> 		$stub = '([\w\d:#@%\/;$()~_?\+-=\\\.&]*)';	
+> 		$ags_pattern = '/' . $stub . '\/ArcGIS\/rest\/services\/' . $stub . '\/' . $stub . '\/MapServer' . '/';
+> 		$params['layer_url'] = new Parameter( 'layer_url', Parameter::TYPE_STRING );
+> 		$params['layer_url']->addCriteria( new CriterionMatchesRegex( $ags_pattern ));
+> 		$params['layer_url']->setDefault(''); 
+> 
+> 		$params['layer_click'] = new Parameter( 'layer_click', Parameter::TYPE_BOOLEAN );
+> 		$params['layer_click']->setDefault( false );
+> 
+> 		$params['layer_opacity'] = new Parameter( 'layer_opacity', Parameter::TYPE_FLOAT );
+> 		$params['layer_opacity']->addCriteria( new CriterionInRange( 0, 1 ));
+> 		$params['layer_opacity']->setDefault( 0 );
+> 	
+Only in Maps/includes/services/GoogleMaps3: README
