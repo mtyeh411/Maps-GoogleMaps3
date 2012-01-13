@@ -196,7 +196,7 @@
 		// Add the ArcGIS layers
 		if ( options.layer_url.length != 0 ) {
 			mw.loader.using( ['ext.maps.gm3.ags'], function() {
-				if ( options.layer_click != false ) {
+				if ( options.layer_click ) {
 					this.map.enableArcGISClick();
 				}
 				var agsLayers = options.layer_url.split( ',', 5 );

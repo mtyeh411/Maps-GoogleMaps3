@@ -1,7 +1,10 @@
+== Description ==
 An updated Google Maps v3 mapping service (based on Semantic Maps v1.1 alpha) to overlay mapping resources accessible through ESRI ArcGIS Server v9.3+ REST API.
 
 Check the patch file for differences (note: original was in Maps_1_1a directory).
 
+
+==  Usage ==
 This version creates 3 new mapping parameters:
 * layer_url (url string)
 * layer_click (boolean)
@@ -9,6 +12,20 @@ This version creates 3 new mapping parameters:
 
 The layer parameters refer to mapping layer endpoints and their options.  The mapping layer endpoints will be overlayed over the Google Maps v3 map.
 
+Examples:
+{{#display_map: Denver, CO
+| layer_url=http://maps.rtd-denver.com/ArcGIS/rest/services/SystemMapLiteGoogleVectors/MapServer
+| layer_opacity=0.4
+| zoom=13
+}}
+
+{{#display_points: Washington, DC
+| layer_url=http://rmgsc.cr.usgs.gov/ArcGIS/rest/services/nhss_weat/MapServer
+| layer_opacity=0.4
+| zoom=5
+}}
+
+== Roadmap ==
 Right now, it only works against ArcGIS v9.3+ RESTful services.  It currently validates the URL to the ArcGIS v9.3+ REST url pattern.  
 
 In the future, it is intended to handle overlaying layers from other layer publishers.

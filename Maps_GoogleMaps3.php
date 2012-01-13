@@ -87,7 +87,7 @@ class MapsGoogleMaps3 extends MapsMappingService {
 		global $egMapsResizableByDefault, $egMapsGMaps3DefaultTilt;
 
 		$stub = '([\w\d:#@%\/;$()~_?\+-=\\\.&]*)';	
-		$ags_pattern = '/' . $stub . '\/ArcGIS\/rest\/services\/' . $stub . '\/' . $stub . '\/MapServer' . '/';
+		$ags_pattern = '/' . $stub . '\/ArcGIS\/rest\/services\/' . $stub . '\/MapServer' . '/';
 		$params['layer_url'] = new Parameter( 'layer_url', Parameter::TYPE_STRING );
 		$params['layer_url']->addCriteria( new CriterionMatchesRegex( $ags_pattern ));
 		$params['layer_url']->setDefault(''); 
