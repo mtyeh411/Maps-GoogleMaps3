@@ -1,4 +1,4 @@
-An updated Google Maps v3 mapping service based on Semantic Maps v1.1 alpha
+An updated Google Maps v3 mapping service (based on Semantic Maps v1.1 alpha) to overlay mapping resources accessible through ESRI ArcGIS Server v9.3+ REST API.
 
 Check the patch file for differences (note: original was in Maps_1_1a directory).
 
