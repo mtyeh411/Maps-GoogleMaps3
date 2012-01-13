@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/mediawiki/!svn/ver/110119/trunk/extensions/Maps/includes/services/GoogleMaps3
+END
+Maps_ParamGMap3Type.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svnroot/mediawiki/!svn/ver/84107/trunk/extensions/Maps/includes/services/GoogleMaps3/Maps_ParamGMap3Type.php
+END
+Maps_ParamGMap3Typestyle.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svnroot/mediawiki/!svn/ver/107704/trunk/extensions/Maps/includes/services/GoogleMaps3/Maps_ParamGMap3Typestyle.php
+END
+Maps_ParamGMap3Types.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svnroot/mediawiki/!svn/ver/94132/trunk/extensions/Maps/includes/services/GoogleMaps3/Maps_ParamGMap3Types.php
+END
+jquery.googlemap.js
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/mediawiki/!svn/ver/110119/trunk/extensions/Maps/includes/services/GoogleMaps3/jquery.googlemap.js
+END
+Maps_ParamGMap3Zoomstyle.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svnroot/mediawiki/!svn/ver/89126/trunk/extensions/Maps/includes/services/GoogleMaps3/Maps_ParamGMap3Zoomstyle.php
+END
+GoogleMaps3.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svnroot/mediawiki/!svn/ver/94168/trunk/extensions/Maps/includes/services/GoogleMaps3/GoogleMaps3.php
+END
+Maps_GoogleMaps3.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/mediawiki/!svn/ver/107704/trunk/extensions/Maps/includes/services/GoogleMaps3/Maps_GoogleMaps3.php
+END
+ext.maps.googlemaps3.js
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svnroot/mediawiki/!svn/ver/95021/trunk/extensions/Maps/includes/services/GoogleMaps3/ext.maps.googlemaps3.js
+END

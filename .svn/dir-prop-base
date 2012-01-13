@@ -1,0 +1,7 @@
+K 13
+svn:externals
+V 135
+geoxml3 http://geoxml3.googlecode.com/svn/trunk/
+earth http://google-maps-utility-library-v3.googlecode.com/svn/trunk/googleearth/src/
+
+END
